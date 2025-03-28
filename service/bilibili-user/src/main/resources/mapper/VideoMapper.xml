@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bilibili.mapper.VideoMapper">
+
+    <resultMap id="BaseResultMap" type="com.bilibili.model.video.Video">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="coverUrl" column="cover_url" jdbcType="VARCHAR"/>
+            <result property="videoUrl" column="video_url" jdbcType="VARCHAR"/>
+            <result property="duration" column="duration" jdbcType="INTEGER"/>
+            <result property="categoryId" column="category_id" jdbcType="BIGINT"/>
+            <result property="tags" column="tags" jdbcType="VARCHAR"/>
+            <result property="bulletScreenCount" column="bullet_screen_count" jdbcType="INTEGER"/>
+            <result property="copyright" column="copyright" jdbcType="VARCHAR"/>
+            <result property="source" column="source" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,title,
+        description,cover_url,video_url,
+        duration,category_id,tags,
+        bullet_screen_count,copyright,source,
+        status,created_at,updated_at
+    </sql>
+</mapper>
