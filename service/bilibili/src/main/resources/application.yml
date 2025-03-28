@@ -1,0 +1,108 @@
+spring:
+  application:
+    name: bilibili
+
+  mail:
+    host: smtp.qq.com
+    username: 2214770953@qq.com
+    password: bdehjrcwcpubebie
+    default-encoding: UTF-8
+    port: 587
+    properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true
+              required: true
+  # 项目名称，可自定义
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/bilibilipro
+      username: kl
+      password: btwdh8689
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 5
+      min-idle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat,wall,slf4j
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: 123456
+        reset-enable: false
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: "*.js,*.css,/druid/*"
+
+  data:
+    redis:
+      password: btwdh8689
+      host: localhost
+      port: 6379
+      database: 1
+    mongodb:
+      host: localhost
+      port: 27017
+      database: bilibili
+      username: root
+      password: 123456
+  servlet:
+   multipart:
+     max-file-size: 500MB
+     max-request-size: 500MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+server:
+  port: 8084  # 改为其他未被占用的端口，例如 8081
+# springdoc-openapi项目配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'bilibili'
+      paths-to-match: '/**'
+      packages-to-scan: com.bilibili.controller
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+#satoken权限管理框架
+sa-token:
+  # token 名称（同时也是 cookie 名称）
+  token-name: token
+  # token 有效期（单位：秒） 默认30天，-1 代表永久有效
+  timeout: 2592000
+  # token 最低活跃频率（单位：秒），如果 token 超过此时间没有访问系统就会被冻结，默认-1 代表不限制，永不冻结
+  active-timeout: -1
+  # 是否允许同一账号多地同时登录 （为 true 时允许一起登录, 为 false 时新登录挤掉旧登录）
+  is-concurrent: true
+  # 在多人登录同一账号时，是否共用一个 token （为 true 时所有登录共用一个 token, 为 false 时每次登录新建一个 token）
+  is-share: false
+  # token 风格（默认可取值：uuid、simple-uuid、random-32、random-64、random-128、tik）
+  token-style: uuid
+  # 是否输出操作日志
+  is-log: true
+
+minio:
+  endpoint: http://localhost:9000
+  accessKey: 9ztn2pzegpOphhmEAymE
+  secretKey: qrXRzNeERqlfp5DMx99EvkSGiwOAWhNeaDtC3EmU
+  bucketName: bilibili
