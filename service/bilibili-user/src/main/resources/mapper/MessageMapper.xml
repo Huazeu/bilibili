@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bilibili.mapper.MessageMapper">
+
+    <resultMap id="BaseResultMap" type="com.bilibili.model.chatmessage.Message">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="fromUserId" column="from_user_id" jdbcType="BIGINT"/>
+            <result property="toUserId" column="to_user_id" jdbcType="BIGINT"/>
+            <result property="type" column="type" jdbcType="TINYINT"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="isRead" column="is_read" jdbcType="TINYINT"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,from_user_id,to_user_id,
+        type,content,is_read,
+        created_at
+    </sql>
+</mapper>
