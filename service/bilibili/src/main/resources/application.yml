@@ -101,28 +101,3 @@ sa-token:
   # 是否输出操作日志
   is-log: true
 
-minio:
-  endpoint: http://localhost:9000
-  accessKey: 9ztn2pzegpOphhmEAymE
-  secretKey: qrXRzNeERqlfp5DMx99EvkSGiwOAWhNeaDtC3EmU
-  bucketName: bilibili
-
-ai:
-  zhipu: 29284389d92d431fb9952ce3afc7a8d2.tQAsv7jcDCh1nMjD
-cos:
-  bucketName: bilibili
-
-baidu:
-  app-id: 118551493
-  api-key: 8XvieLuJP3CTQEAxGFFFciGI
-  secret-key: q5SC3c1gR0V31YcbSoyYOCuYlXWD4Oab
-vod:
-  appId: 1318296130
-  secretId: AKIDTzPbZJqEVikY8UdtHYtEOYlz1oStCH7j
-  secretKey: WnqfIk05yxrtvmOmwtc8kLoCWk6NUVQH
-  region: ap-guangzhou
-  procedure: SimpleAesEncryptPreset #任务流
-  tempPath: D:\bilibili
-  playKey: wrTwwu8U3DRSRDgC8l7q  #播放加密key
-  bucketPrivate: atguigu-1318296130
-  callbackUrl: http://fqm3y3.natappfree.cc/api/album/trackInfo/notify
