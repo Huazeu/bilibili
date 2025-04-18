@@ -15,8 +15,7 @@ public class CosClientConfig {
     public COSClient COSClient() {
         // 1 初始化用户身份信息（secretId, secretKey）。
 // SECRETID 和 SECRETKEY 请登录访问管理控制台 https://console.cloud.tencent.com/cam/capi 进行查看和管理
-        String secretId = "AKIDZy96uWO90h9NM7ex2rY1GG3dz7EF4gDe";//用户的 SecretId，建议使用子账号密钥，授权遵循最小权限指引，降低使用风险。子账号密钥获取可参见 https://cloud.tencent.com/document/product/598/37140
-        String secretKey = "KQI1WmocBVbS4SchqmUxCE5iEl8HF1hE" ;//用户的 SecretKey，建议使用子账号密钥，授权遵循最小权限指引，降低使用风险。子账号密钥获取可参见 https://cloud.tencent.com/document/product/598/37140
+     最小权限指引，降低使用风险。子账号密钥获取可参见 https://cloud.tencent.com/document/product/598/37140
         COSCredentials cred = new BasicCOSCredentials(secretId, secretKey);
 
         // 2 设置 bucket 的地域, COS 地域的简称请参见 https://cloud.tencent.com/document/product/436/6224
