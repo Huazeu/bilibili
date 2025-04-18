@@ -107,21 +107,7 @@ minio:
   secretKey: ***REMOVED***
   bucketName: bilibili
 
-ai:
-  zhipu: ***REMOVED***
 cos:
   bucketName: bilibili
 
-baidu:
-  app-id: 118551493
-  api-key: ***REMOVED***
-  secret-key: ***REMOVED***
-vod:
-  appId: 1318296130
-  secretId: ***REMOVED***
-  secretKey: ***REMOVED***
-  region: ap-guangzhou
-  procedure: SimpleAesEncryptPreset #任务流
-  tempPath: D:\bilibili
-  playKey: ***REMOVED***  #播放加密key
 
