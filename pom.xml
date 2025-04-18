@@ -46,7 +46,7 @@
     <!-- 定义子模块 -->
     <modules>
 
-        <module>bilibili-common</module>
+<!--        <module>bilibili-common</module>-->
         <module>bilibili-module</module>
         <module>service</module>
     </modules>
@@ -117,12 +117,18 @@
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>cn.bigmodel.openapi</groupId>
+            <artifactId>oapi-java-sdk</artifactId>
+            <version>release-V4-2.3.1</version>
+        </dependency>
 
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
             <version>3.5.7</version> <!-- 截至目前最新版本，建议检查最新版本 -->
         </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-3-starter</artifactId>
@@ -144,11 +150,7 @@
     <dependencyManagement>
         <dependencies>
             <!-- 子模块之间的依赖关系可以在这里定义 -->
-            <dependency>
-                <groupId>com.bilibili</groupId>
-                <artifactId>bilibili-common</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

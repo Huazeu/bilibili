@@ -1,4 +1,4 @@
-package bilibili.util;
+package com.bilibili.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

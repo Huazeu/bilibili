@@ -1,4 +1,4 @@
-package bilibili.result;
+package com.bilibili.result;
 
 import lombok.Getter;
 

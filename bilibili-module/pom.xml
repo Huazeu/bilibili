@@ -9,11 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <dependencies>
-        <dependency>
-            <groupId>com.bilibili</groupId>
-            <artifactId>common-util</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+
     </dependencies>
     <artifactId>bilibili-module</artifactId>
 

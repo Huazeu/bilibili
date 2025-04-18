@@ -1,4 +1,4 @@
-package com.bilibili.vo.user;
+package com.bilibili.DTO;
 
 import lombok.Data;
 
@@ -6,11 +6,10 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * 用户信息 VO
+ * 用户数据传输对象（DTO）
  */
 @Data
-public class UserVO implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class UserDTO implements Serializable {
     private Long id;
     private String username;
     private String email;
@@ -26,4 +25,6 @@ public class UserVO implements Serializable {
     private Integer status;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+    private static final long serialVersionUID = 1L;
 }

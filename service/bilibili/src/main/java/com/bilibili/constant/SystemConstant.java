@@ -6,7 +6,7 @@
  * @ Description：
  */
 
-package bilibili.constant;
+package com.bilibili.constant;
 
 public class SystemConstant {
     public static final String USER_INFO = "userInfo";
