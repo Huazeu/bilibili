@@ -1,4 +1,4 @@
-package bilibili.config;
+package com.bilibili.config;
 
 import cn.dev33.satoken.interceptor.SaInterceptor;
 import org.springframework.context.annotation.Configuration;

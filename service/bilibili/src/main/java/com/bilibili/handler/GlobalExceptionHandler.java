@@ -1,8 +1,9 @@
-package bilibili.handler;
+package com.bilibili.handler;
 
-import bilibili.exception.BlibiliException;
-import bilibili.result.Result;
-import bilibili.result.ResultCodeEnum;
+
+import com.bilibili.exception.BlibiliException;
+import com.bilibili.result.Result;
+import com.bilibili.result.ResultCodeEnum;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -22,7 +23,7 @@ import java.util.Map;
 
 @Slf4j
 @RestControllerAdvice
-public class GlobalExceptionHandler   {
+public class GlobalExceptionHandler {
 
     // 提取公共方法处理 BindingResult
     private Map<String, Object> getErrorMap(BindingResult result) {

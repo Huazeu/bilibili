@@ -1,7 +1,6 @@
-package bilibili.result;
+package com.bilibili.result;
 
 
-import bilibili.result.ResultCodeEnum;
 import lombok.Data;
 
 /**

@@ -8,16 +8,17 @@
 
 package com.bilibili.controller;
 
-import bilibili.exception.BlibiliException;
-import bilibili.result.Result;
-import bilibili.result.ResultCodeEnum;
-import bilibili.util.PasswordHashing;
+
 import cn.dev33.satoken.annotation.SaCheckLogin;
 import cn.dev33.satoken.stp.StpUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.bilibili.exception.BlibiliException;
 import com.bilibili.model.user.User;
+import com.bilibili.result.Result;
+import com.bilibili.result.ResultCodeEnum;
 import com.bilibili.service.UserService;
 import com.bilibili.util.EmailService;
+import com.bilibili.util.PasswordHashing;
 import com.bilibili.vo.user.LoginVO;
 import com.bilibili.vo.user.RegisterVO;
 import com.bilibili.vo.user.UserVO;
@@ -27,7 +28,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import static bilibili.constant.SystemConstant.USER_INFO;
+import static com.bilibili.constant.SystemConstant.USER_INFO;
 
 @RestController
 @RequestMapping("/user")

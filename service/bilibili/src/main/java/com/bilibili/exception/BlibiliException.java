@@ -1,6 +1,6 @@
-package bilibili.exception;
+package com.bilibili.exception;
 
-import bilibili.result.ResultCodeEnum;
+import com.bilibili.result.ResultCodeEnum;
 import lombok.Getter;
 
 /**
